@@ -1,0 +1,52 @@
+var friends = [
+    {
+        name:"lauren",
+        photo:"https://iso.500px.com/wp-content/uploads/2015/03/business_cover.jpeg",
+        scores:[
+            5,
+            1,
+            4,
+            4,
+            5,
+            1,
+            2,
+            5,
+            4,
+            1
+        ]
+    },
+    {
+        name:"lynn",
+        photo:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2ZUMuWhd6VjZp-sT7iuoVDOBVvWIUbQYaR-2ryvqun8kRMuS-",
+        scores:[
+            5,
+            1,
+            4,
+            4,
+            5,
+            1,
+            2,
+            5,
+            4,
+            1
+        ]
+    },
+    {
+        name:"Paul",
+        photo:"https://gentleman-blog-production.s3.amazonaws.com/wp-content/uploads/styleguide-brille.jpg",
+        scores:[
+            5,
+            1,
+            4,
+            4,
+            5,
+            1,
+            2,
+            5,
+            4,
+            1
+        ]
+    }
+
+];
+  
