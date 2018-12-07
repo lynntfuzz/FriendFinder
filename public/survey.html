@@ -1,1 +1,531 @@
-Welcome to Survey.html
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>FriendFinder</title>
+
+  <!-- Latest compiled and minified CSS & JS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+  <!-- Font Awesome Glyphicons -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h2>Friend Finder Survey:</h2>
+    <hr>
+
+    <h3>Answer a few questions about yourself.</h3>
+    <hr>
+  <form action="" class="main-form needs-validation" novalidate>
+    <h4>Full Name (Required)</h4>
+    <input type="text" id="name" class="form-control" required>
+    <!-- <div class="invalid-feedback">Please enter name.</div> -->
+    
+    <h4>URL for photo (Required)</h4>
+    <input type="text" id="photo" class="form-control" required>
+
+    <hr>
+
+    <!-- Question 1 -->
+    <fieldset class="form-group">
+        <legend>1. I love reading</legend>
+        <div class="radio-inline">
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="optionsRadios1" id="q1" value="1">
+           1 (Strongly Disagree)
+          </label>
+        </div>
+        <div class="radio-inline">
+        <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="optionsRadios1" id="q1" value="2">
+           2
+          </label>
+        </div>
+        <div class="radio-inline">
+            <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="optionsRadios1" id="q1" value="3" checked>
+                3
+            </label>
+        </div>
+        <div class="radio-inline">
+            <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="optionsRadios1" id="q1" value="4">
+                4
+            </label>
+        </div>
+        <div class="radio-inline">
+            <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="optionsRadios1" id="q1" value="5">
+                5 (Strongly Agree)
+            </label>
+        </div>
+    </fieldset>
+    <!-- End of Question 1 -->
+
+     <!-- Question 2 -->
+     <fieldset class="form-group">
+        <legend>2. I love parties</legend>
+        <div class="radio-inline">
+        <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="optionsRadios2" id="optionsRadios1" value="1">
+           1 (Strongly Disagree)
+          </label>
+        </div>
+        <div class="radio-inline">
+        <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="optionsRadios2" id="optionsRadios2" value="2">
+           2
+          </label>
+        </div>
+        <div class="radio-inline">
+            <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="optionsRadios2" id="optionsRadios3" value="3" checked>
+                3
+            </label>
+        </div>
+        <div class="radio-inline">
+            <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="optionsRadios2" id="optionsRadios4" value="4">
+                4
+            </label>
+        </div>
+        <div class="radio-inline">
+            <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="optionsRadios2" id="optionsRadios5" value="5">
+                5 (Strongly Agree)
+            </label>
+        </div>
+    </fieldset>
+    <!-- End of Question 2 -->
+    
+    <!-- Question 3 -->
+    <fieldset class="form-group">
+        <legend>3. I love dogs</legend>
+        <div class="radio-inline">
+        <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="optionsRadios3" id="optionsRadios1" value="1">
+           1 (Strongly Disagree)
+          </label>
+        </div>
+        <div class="radio-inline">
+        <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="optionsRadios3" id="optionsRadios2" value="2">
+           2
+          </label>
+        </div>
+        <div class="radio-inline">
+            <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="optionsRadios3" id="optionsRadios3" value="3" checked>
+                3
+            </label>
+        </div>
+        <div class="radio-inline">
+            <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="optionsRadios3" id="optionsRadios4" value="4">
+                4
+            </label>
+        </div>
+        <div class="radio-inline">
+            <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="optionsRadios3" id="optionsRadios5" value="5">
+                5 (Strongly Agree)
+            </label>
+        </div>
+    </fieldset>
+    <!-- End of Question 3 --> 
+    
+    <!-- Question 4 -->
+    <fieldset class="form-group">
+        <legend>4. I love cats</legend>
+        <div class="radio-inline">
+        <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="optionsRadios4" id="optionsRadios1" value="1">
+           1 (Strongly Disagree)
+          </label>
+        </div>
+        <div class="radio-inline">
+        <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="optionsRadios4" id="optionsRadios2" value="2">
+           2
+          </label>
+        </div>
+        <div class="radio-inline">
+            <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="optionsRadios4" id="optionsRadios3" value="3" checked>
+                3
+            </label>
+        </div>
+        <div class="radio-inline">
+            <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="optionsRadios4" id="optionsRadios4" value="4">
+                4
+            </label>
+        </div>
+        <div class="radio-inline">
+            <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="optionsRadios4" id="optionsRadios5" value="5">
+                5 (Strongly Agree)
+            </label>
+        </div>
+    </fieldset>
+    <!-- End of Question 4 --> 
+    
+    <!-- Question 5 -->
+    <fieldset class="form-group">
+        <legend>5. I love to travel</legend>
+        <div class="radio-inline">
+        <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="optionsRadios5" id="optionsRadios1" value="1">
+           1 (Strongly Disagree)
+          </label>
+        </div>
+        <div class="radio-inline">
+        <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="optionsRadios5" id="optionsRadios2" value="2">
+           2
+          </label>
+        </div>
+        <div class="radio-inline">
+            <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="optionsRadios5" id="optionsRadios3" value="3" checked>
+                3
+            </label>
+        </div>
+        <div class="radio-inline">
+            <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="optionsRadios5" id="optionsRadios4" value="4">
+                4
+            </label>
+        </div>
+        <div class="radio-inline">
+            <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="optionsRadios5" id="optionsRadios5" value="5">
+                5 (Strongly Agree)
+            </label>
+        </div>
+    </fieldset>
+    <!-- End of Question 5 -->
+
+     <!-- Question 6 -->
+     <fieldset class="form-group">
+        <legend>6. I love learning new things</legend>
+        <div class="radio-inline">
+        <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="optionsRadios6" id="optionsRadios1" value="1">
+           1 (Strongly Disagree)
+          </label>
+        </div>
+        <div class="radio-inline">
+        <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="optionsRadios6" id="optionsRadios2" value="2">
+           2
+          </label>
+        </div>
+        <div class="radio-inline">
+            <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="optionsRadios6" id="optionsRadios3" value="3" checked>
+                3
+            </label>
+        </div>
+        <div class="radio-inline">
+            <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="optionsRadios6" id="optionsRadios4" value="4">
+                4
+            </label>
+        </div>
+        <div class="radio-inline">
+            <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="optionsRadios6" id="optionsRadios5" value="5">
+                5 (Strongly Agree)
+            </label>
+        </div>
+    </fieldset>
+    <!-- End of Question 6 -->
+
+     <!-- Question 7 -->
+     <fieldset class="form-group">
+        <legend>7. I hate pickles</legend>
+        <div class="radio-inline">
+        <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="optionsRadios7" id="optionsRadios1" value="1">
+           1 (Strongly Disagree)
+          </label>
+        </div>
+        <div class="radio-inline">
+        <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="optionsRadios7" id="optionsRadios2" value="2">
+           2
+          </label>
+        </div>
+        <div class="radio-inline">
+            <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="optionsRadios7" id="optionsRadios3" value="3" checked>
+                3
+            </label>
+        </div>
+        <div class="radio-inline">
+            <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="optionsRadios7" id="optionsRadios4" value="4">
+                4
+            </label>
+        </div>
+        <div class="radio-inline">
+            <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="optionsRadios7" id="optionsRadios5" value="5">
+                5 (Strongly Agree)
+            </label>
+        </div>
+    </fieldset>
+    <!-- End of Question 7 -->
+
+     <!-- Question 8 -->
+     <fieldset class="form-group">
+        <legend>8. I enjoy going to museums</legend>
+        <div class="radio-inline">
+        <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="optionsRadios8" id="optionsRadios1" value="1">
+           1 (Strongly Disagree)
+          </label>
+        </div>
+        <div class="radio-inline">
+        <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="optionsRadios8" id="optionsRadios2" value="2">
+           2
+          </label>
+        </div>
+        <div class="radio-inline">
+            <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="optionsRadios8" id="optionsRadios3" value="3" checked>
+                3
+            </label>
+        </div>
+        <div class="radio-inline">
+            <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="optionsRadios8" id="optionsRadios4" value="4">
+                4
+            </label>
+        </div>
+        <div class="radio-inline">
+            <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="optionsRadios8" id="optionsRadios5" value="5">
+                5 (Strongly Agree)
+            </label>
+        </div>
+    </fieldset>
+    <!-- End of Question 8 -->
+
+     <!-- Question 9 -->
+     <fieldset class="form-group">
+        <legend>9. I am a morning person</legend>
+        <div class="radio-inline">
+        <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="optionsRadios9" id="optionsRadios1" value="1">
+           1 (Strongly Disagree)
+          </label>
+        </div>
+        <div class="radio-inline">
+        <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="optionsRadios9" id="optionsRadios2" value="2">
+           2
+          </label>
+        </div>
+        <div class="radio-inline">
+            <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="optionsRadios9" id="optionsRadios3" value="3" checked>
+                3
+            </label>
+        </div>
+        <div class="radio-inline">
+            <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="optionsRadios9" id="optionsRadios4" value="4">
+                4
+            </label>
+        </div>
+        <div class="radio-inline">
+            <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="optionsRadios9" id="optionsRadios5" value="5">
+                5 (Strongly Agree)
+            </label>
+        </div>
+    </fieldset>
+    <!-- End of Question 9 -->
+
+     <!-- Question 10 -->
+     <fieldset class="form-group">
+        <legend>10. I love the outdoors and nature</legend>
+        <div class="radio-inline">
+        <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="optionsRadios10" id="optionsRadios1" value="1">
+           1 (Strongly Disagree)
+          </label>
+        </div>
+        <div class="radio-inline">
+        <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="optionsRadios10" id="optionsRadios2" value="2">
+           2
+          </label>
+        </div>
+        <div class="radio-inline">
+            <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="optionsRadios10" id="optionsRadios3" value="3" checked>
+                3
+            </label>
+        </div>
+        <div class="radio-inline">
+            <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="optionsRadios10" id="optionsRadios4" value="4">
+                4
+            </label>
+        </div>
+        <div class="radio-inline">
+            <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="optionsRadios10" id="optionsRadios5" value="5">
+                5 (Strongly Agree)
+            </label>
+        </div>
+    </fieldset>
+
+    <!-- Submit Button -->
+    <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i>
+        Submit</button>
+</form>
+ 
+    <br>
+    <br>
+
+
+    <hr>
+    <footer class="footer">
+      <div class="container">
+        <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/afhaque/friendfinder">GitHub Repo</a></p>
+      </div>
+    </footer>
+
+  </div>
+
+<!-- Modal -->
+<div class="modal fade" id="results-modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalCenterTitle"><strong>Best Match</strong></h5>
+         
+        </div>
+        <div class="modal-body">
+          ...  <h2 id="match-name"></h2>
+          <img class="img-responsive" id="match-img" src="https://media.gettyimages.com/photos/pictures-of-real-santa-claus-carrying-a-gift-bag-picture-id184835154" alt="">
+        
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Modal -->
+  <!-- <div id="results-modal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <!-- <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h2 class="modal-title"><strong>Best Match</strong></h2>
+        </div>
+        <div class="modal-body">
+          <h2 id="match-name"></h2>
+          <img id="match-img" src="https://media.gettyimages.com/photos/pictures-of-real-santa-claus-carrying-a-gift-bag-picture-id184835154" alt="">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div> -->
+
+    <!-- </div> -->
+  </div> -->
+
+  <script type="text/javascript">
+    var form = document.querySelector('.needs-validation');
+    
+    form.addEventListener('submit', function (event) {
+        if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+            console.log("FORM NOT VALID");
+        }
+        form.classList.add('was-validated');
+    });
+
+    $("#submit").on("click", function(event) {
+        event.preventDefault();
+        console.log("Name: " + $("#name").val().trim());
+        console.log("Photo: " + $("#photo").val().trim());
+        console.log("Question 1" + $('input[name="optionsRadios1"]:checked').val());
+        console.log("Question 2" + $('input[name="optionsRadios2"]:checked').val());
+        console.log("Question 3" + $('input[name="optionsRadios3"]:checked').val());
+        console.log("Question 4" + $('input[name="optionsRadios4"]:checked').val());
+        console.log("Question 5" + $('input[name="optionsRadios5"]:checked').val());
+        console.log("Question 6" + $('input[name="optionsRadios6"]:checked').val());
+        console.log("Question 7" + $('input[name="optionsRadios7"]:checked').val());
+        console.log("Question 8" + $('input[name="optionsRadios7"]:checked').val());
+        console.log("Question 9" + $('input[name="optionsRadios9"]:checked').val());
+        console.log("Question 10" + $('input[name="optionsRadios10"]:checked').val());
+
+
+
+        // Here we grab the form elements
+        var newFriend = {
+            name: $("#name").val().trim(),
+            photo: $("#photo").val().trim(),
+            scores: [
+                $('input[name="optionsRadios1"]:checked').val(),
+                $('input[name="optionsRadios2"]:checked').val(),
+                $('input[name="optionsRadios3"]:checked').val(),
+                $('input[name="optionsRadios4"]:checked').val(),
+                $('input[name="optionsRadios5"]:checked').val(),
+                $('input[name="optionsRadios6"]:checked').val(),
+                $('input[name="optionsRadios7"]:checked').val(),
+                $('input[name="optionsRadios8"]:checked').val(),
+                $('input[name="optionsRadios9"]:checked').val(),
+                $('input[name="optionsRadios10"]:checked').val(),
+                $('input[name="optionsRadios4"]:checked').val()
+          ]
+            
+        };
+
+    console.log(newFriend);
+
+    // This line is the magic. It"s very similar to the standard ajax function we used.
+    // Essentially we give it a URL, we give it the object we want to send, then we have a "callback".
+    // The callback is the response of the server. In our case, we set up code in api-routes that "returns" true or false
+    // depending on if a tables is available or not.
+
+    $.post("/api/friends", newFriend, function(data) {   
+
+        // Grab the result from the AJAX post so that the best match's name and photo are displayed.
+        $("#match-name").text(data.name);
+        $("#match-img").attr("src", data.photo);
+
+        // Show the modal with the best match
+        $("#results-modal").modal("toggle");
+
+    });
+});
+  </script>
+
+</body>
+
+</html>
