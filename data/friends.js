@@ -1,4 +1,4 @@
-[
+var friends = [
     {
     name: "Santa Claus",
     photo: "https://amp.thisisinsider.com/images/5a282a7e3339b037278b45b5-1536-1152.jpg",
