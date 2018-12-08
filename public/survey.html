@@ -5,11 +5,15 @@
 <head>
   <meta charset="UTF-8">
   <title>FriendFinder</title>
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 
   <!-- Latest compiled and minified CSS & JS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script src="https://code.jquery.com/jquery.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
   <!-- Font Awesome Glyphicons -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
@@ -25,14 +29,14 @@
 
     <h3>Answer a few questions about yourself.</h3>
     <hr>
-  <form action="" class="main-form needs-validation" novalidate>
+  <form action="" class="survey-form needs-validation" novalidate>
     <h4>Full Name (Required)</h4>
-    <input type="text" id="name" class="form-control" required>
-    <!-- <div class="invalid-feedback">Please enter name.</div> -->
+    <input type="text" id="name" class="form-control" placeholder="Full Name" autofocus required>
+    <div class="invalid-feedback">Please Enter Name.</div>
     
-    <h4>URL for photo (Required)</h4>
-    <input type="text" id="photo" class="form-control" required>
-
+    <h4>URL for photo (Required if you don't have one use https://tinyurl.com/yc7q8gj3)</h4>
+    <input type="url" id="photo" class="form-control" placeholder="Valid URL" required>
+    <div class="invalid-feedback">Please Enter URL.</div>
     <hr>
 
     <!-- Question 1 -->
@@ -435,19 +439,105 @@
   </div> 
 
   <script type="text/javascript">
+  
     var form = document.querySelector('.needs-validation');
     
     form.addEventListener('submit', function (event) {
+        event.preventDefault();
+        event.stopPropagation();
         if (form.checkValidity() === false) {
-            event.preventDefault();
-            event.stopPropagation();
             console.log("FORM NOT VALID");
+        } else {
+            // Here we grab the form elements
+        var newFriend = {
+            name: $("#name").val().trim(),
+            photo: $("#photo").val().trim(),
+            scores: [
+                $('input[name="optionsRadios1"]:checked').val(),
+                $('input[name="optionsRadios2"]:checked').val(),
+                $('input[name="optionsRadios3"]:checked').val(),
+                $('input[name="optionsRadios4"]:checked').val(),
+                $('input[name="optionsRadios5"]:checked').val(),
+                $('input[name="optionsRadios6"]:checked').val(),
+                $('input[name="optionsRadios7"]:checked').val(),
+                $('input[name="optionsRadios8"]:checked').val(),
+                $('input[name="optionsRadios9"]:checked').val(),
+                $('input[name="optionsRadios10"]:checked').val(),
+                $('input[name="optionsRadios4"]:checked').val()
+          ]
         }
-        form.classList.add('was-validated');
+            
+        
+
+    console.log(newFriend);
+
+    // This line is the magic. It"s very similar to the standard ajax function we used.
+    // Essentially we give it a URL, we give it the object we want to send, then we have a "callback".
+    // The callback is the response of the server. In our case, we set up code in api-routes that "returns" true or false
+    // depending on if a tables is available or not.
+
+    $.post("/api/friends", newFriend, function(data) {   
+
+        // Grab the result from the AJAX post so that the best match's name and photo are displayed.
+        $("#match-name").text(data.name);
+        $("#match-img").attr("src", data.photo);
+
+        // Show the modal with the best match
+        $("#results-modal").modal("toggle");
+
+    });
+    }  
+    form.classList.add('was-validated');  
+        
     });
 
-    $("#submit").on("click", function(event) {
+
+
+
+
+
+
+    $("#submitXXXXXX").on("click", function(event) {
         event.preventDefault();
+        console.log("SUBMIT CLICKED");
+
+         //Fetch form to apply custom Bootstrap validation
+        if (form[0].checkValidity() === false) {
+            console.log("form not valid");
+            event.preventDefault();
+        }
+        form.addClass('was-validated');
+        console.log("why does this continue???")
+        //Make ajax call here
+
+
+// <!-- 
+//         // Validation Code
+//         var isValid = true;
+
+//         // Validate name field
+//         var name = $("#name").val().trim();
+//         if ( name == "")  {
+//             console.log("NAME NOT VALID");
+//             $("#name").addClass("is-invalid");
+//             isValid = false;
+//         }
+//         $("#name").val(name);
+
+//         // Validate photo url
+//         var photo = $("#photo").val().trim();
+//         if (photo == "") {
+//             console.log("PHOTO NOT VALID");
+//             $("#photo").addClass("is-invalid");
+//             isValid = false;
+//         }
+//         $("#photo").val(photo);
+
+//         if (!isValid) {
+//             alert("Please enter required fields (name and photo url).");
+//             return;
+//         }  -->
+        
         // console.log("Name: " + $("#name").val().trim());
         // console.log("Photo: " + $("#photo").val().trim());
         // console.log("Question 1" + $('input[name="optionsRadios1"]:checked').val());
@@ -498,6 +588,7 @@
         $("#results-modal").modal("toggle");
 
     });
+
 });
   </script>
 
